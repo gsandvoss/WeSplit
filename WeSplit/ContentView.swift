@@ -8,29 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name = ""
+
     var body: some View {
+        
         Form {
-            Section {
-                Text("Hello, world!")
-                Text("Hello, world!")
-                Text("Hello, world!")
-                Text("Hello, world!")
-                Text("Hello, world!")
-                Text("Hello, world!")
-            }
-                Section {
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
+            TextField("Enter your name", text: $name)
+            Text("Your name is \(name)")
+
+                }
             }
         }
-    }
+
+    
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            }
         }
-    }
-}
+    
+
